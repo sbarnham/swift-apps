@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A1D11682387F77900E2AB05 /* Tamagotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D11672387F77900E2AB05 /* Tamagotchi.swift */; };
+		5A1D11692387F77900E2AB05 /* Tamagotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D11672387F77900E2AB05 /* Tamagotchi.swift */; };
 		5A5C499E2384219800E29C4B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C499D2384219800E29C4B /* main.swift */; };
-		5A5C49AB238421CD00E29C4B /* TamagotchiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C49AA238421CD00E29C4B /* TamagotchiTests.swift */; };
+		5A5C49AB238421CD00E29C4B /* TamagotchiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C49AA238421CD00E29C4B /* TamagotchiTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,10 +26,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5A1D11672387F77900E2AB05 /* Tamagotchi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagotchi.swift; sourceTree = "<group>"; };
 		5A5C499A2384219800E29C4B /* Tamagotchi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tamagotchi; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A5C499D2384219800E29C4B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5A5C49A8238421CD00E29C4B /* TamagotchiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TamagotchiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A5C49AA238421CD00E29C4B /* TamagotchiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagotchiTests.swift; sourceTree = "<group>"; };
+		5A5C49AA238421CD00E29C4B /* TamagotchiTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagotchiTest.swift; sourceTree = "<group>"; };
 		5A5C49AC238421CD00E29C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				5A5C499D2384219800E29C4B /* main.swift */,
+				5A1D11672387F77900E2AB05 /* Tamagotchi.swift */,
 			);
 			path = Tamagotchi;
 			sourceTree = "<group>";
@@ -78,7 +82,7 @@
 		5A5C49A9238421CD00E29C4B /* TamagotchiTests */ = {
 			isa = PBXGroup;
 			children = (
-				5A5C49AA238421CD00E29C4B /* TamagotchiTests.swift */,
+				5A5C49AA238421CD00E29C4B /* TamagotchiTest.swift */,
 				5A5C49AC238421CD00E29C4B /* Info.plist */,
 			);
 			path = TamagotchiTests;
@@ -173,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A1D11682387F77900E2AB05 /* Tamagotchi.swift in Sources */,
 				5A5C499E2384219800E29C4B /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,7 +186,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A5C49AB238421CD00E29C4B /* TamagotchiTests.swift in Sources */,
+				5A1D11692387F77900E2AB05 /* Tamagotchi.swift in Sources */,
+				5A5C49AB238421CD00E29C4B /* TamagotchiTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
