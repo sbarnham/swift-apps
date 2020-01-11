@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A3F6A0D23CA0C7100EAFB2C /* StarterCars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F6A0C23CA0C7100EAFB2C /* StarterCars.swift */; };
 		5A509AC023C8BF7F00723882 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A509ABF23C8BF7F00723882 /* AppDelegate.swift */; };
 		5A509AC223C8BF7F00723882 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A509AC123C8BF7F00723882 /* SceneDelegate.swift */; };
 		5A509AC423C8BF7F00723882 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A509AC323C8BF7F00723882 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A3F6A0C23CA0C7100EAFB2C /* StarterCars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterCars.swift; sourceTree = "<group>"; };
 		5A509ABC23C8BF7F00723882 /* CarCustomizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarCustomizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A509ABF23C8BF7F00723882 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A509AC123C8BF7F00723882 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				5A509ACA23C8BF8100723882 /* LaunchScreen.storyboard */,
 				5A509ACD23C8BF8100723882 /* Info.plist */,
 				5A509AEF23C8C0FD00723882 /* Car.swift */,
+				5A3F6A0C23CA0C7100EAFB2C /* StarterCars.swift */,
 			);
 			path = CarCustomizer;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				5A509AC423C8BF7F00723882 /* ViewController.swift in Sources */,
 				5A509AC023C8BF7F00723882 /* AppDelegate.swift in Sources */,
 				5A509AF023C8C0FD00723882 /* Car.swift in Sources */,
+				5A3F6A0D23CA0C7100EAFB2C /* StarterCars.swift in Sources */,
 				5A509AC223C8BF7F00723882 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
