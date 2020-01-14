@@ -15,6 +15,7 @@
 		5ACD4C8523CDEA7600A37C96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ACD4C8323CDEA7600A37C96 /* LaunchScreen.storyboard */; };
 		5ACD4C9023CDEA7600A37C96 /* TamagotchiAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD4C8F23CDEA7600A37C96 /* TamagotchiAppTests.swift */; };
 		5ACD4C9B23CDEA7600A37C96 /* TamagotchiAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD4C9A23CDEA7600A37C96 /* TamagotchiAppUITests.swift */; };
+		5ACD4CA923CDEB9600A37C96 /* Tamagotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD4CA823CDEB9600A37C96 /* Tamagotchi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		5ACD4C9623CDEA7600A37C96 /* TamagotchiAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TamagotchiAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ACD4C9A23CDEA7600A37C96 /* TamagotchiAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagotchiAppUITests.swift; sourceTree = "<group>"; };
 		5ACD4C9C23CDEA7600A37C96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5ACD4CA823CDEB9600A37C96 /* Tamagotchi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagotchi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				5ACD4C8123CDEA7600A37C96 /* Assets.xcassets */,
 				5ACD4C8323CDEA7600A37C96 /* LaunchScreen.storyboard */,
 				5ACD4C8623CDEA7600A37C96 /* Info.plist */,
+				5ACD4CA823CDEB9600A37C96 /* Tamagotchi.swift */,
 			);
 			path = TamagotchiApp;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ACD4CA923CDEB9600A37C96 /* Tamagotchi.swift in Sources */,
 				5ACD4C7D23CDEA7500A37C96 /* ViewController.swift in Sources */,
 				5ACD4C7923CDEA7500A37C96 /* AppDelegate.swift in Sources */,
 				5ACD4C7B23CDEA7500A37C96 /* SceneDelegate.swift in Sources */,

@@ -10,11 +10,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var tamagotchiStatsDisplay: UILabel!
+    
+    var overallFile = Tamagotchi()
+    var pet : Tamagotchi?
+
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        pet = Tamagotchi.init()
+        tamagotchiStatsDisplay.text = overallFile.displayStats()
     }
 
-
+    @IBAction func feedMeal(_ sender: Any) {
+        if pet!.health < 8 {
+            pet?.health += 1
+        }
+        pet?.weight += 3
+        update()
+    }
+    
+    func update() {
+        tamagotchiStatsDisplay.text = overallFile.displayStats()
+    }
+    
 }
 
