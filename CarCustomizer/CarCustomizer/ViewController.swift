@@ -23,7 +23,20 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var carStatistics: UILabel!
     
+    @IBOutlet var timeRemainingDisplay: UILabel!
+    
+    @IBOutlet var cycleCarsButton: UIButton!
+    
+    @IBOutlet var finishButton: UIButton!
+    
     var i = 0
+    var timeRemaining = 30 {
+        didSet {
+            timeRemainingDisplay.text = "\(timeRemaining)"
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(countdown), userInfo: nil, repeats: true)
+        }
+    }
+    
     var remainingFunds = 0 {
         didSet {
             remainingFundsDisplay.text = "Remaining Funds: \(remainingFunds)"
@@ -35,13 +48,18 @@ class ViewController: UIViewController {
             carStatistics.text = car?.displayStats()
         }
     }
+    
+    var timer: Timer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         car = starterCars.cars[i]
         remainingFunds = 1000
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(countdown), userInfo: nil, repeats: true)
+        timeRemainingDisplay.text = "\(timeRemaining)"
     }
+        
     
     @IBAction func cycleCars(_ sender: Any) {
         i += 1
@@ -111,16 +129,69 @@ class ViewController: UIViewController {
         engineAndExhaustPackageSwitch.isEnabled = true
         turboPackageSwitch.isEnabled = true
         tiresPackageSwitch.isEnabled = true
-        if remainingFunds < 700 {
+        if remainingFunds < 700 && aerodynamicEnchancementSwitch.isOn == false {
             aerodynamicEnchancementSwitch.isEnabled = false
-        if remainingFunds < 500 {
-            engineAndExhaustPackageSwitch.isEnabled = false
-            turboPackageSwitch.isEnabled = false
         }
-        if remainingFunds < 300 {
-            tiresPackageSwitch.isEnabled = false
+        if remainingFunds < 500 {
+            if engineAndExhaustPackageSwitch.isOn == false {
+                engineAndExhaustPackageSwitch.isEnabled = false
+            }
+            if turboPackageSwitch.isOn == false {
+                turboPackageSwitch.isEnabled = false
+            }
+        }
+            if remainingFunds < 300 && tiresPackageSwitch.isOn == false {
+                tiresPackageSwitch.isEnabled = false
         }
     }
+    
+    func finishAlert(title: String) {
+        if title == "" {
+            let title = "You have run out of time!"
+        }
+        let finish = UIAlertController(title: title, message: """
+                Your finished car stats are:
+                Make - \(car?.make ?? "")
+                Model - \(car?.model ?? "")
+                Top Speed - \(car?.topSpeed ?? 0)mph
+                Acceleration - \(car?.acceleration ?? 0) seconds
+                Handling - \(car?.handling ?? 0)
+                Your remaining funds were: \(remainingFunds)
+                """, preferredStyle:.alert)
+        finish.addAction(UIAlertAction(title: "Next Car", style: .cancel, handler: {(action:UIAlertAction!) in
+            self.cycleCars(0)
+            self.cycleCarsButton.isEnabled = true
+            self.finishButton.isEnabled = true
+            self.timeRemaining = 30
+        }))
+        self.present(finish, animated: true)
+    }
+    
+    @objc func countdown() {
+        if timeRemaining > 0 {
+            timeRemaining -= 1
+            timeRemainingDisplay.text = "\(timeRemaining)"
+        } else {
+            timer?.invalidate()
+            engineAndExhaustPackageSwitch.isEnabled = false
+            turboPackageSwitch.isEnabled = false
+            tiresPackageSwitch.isEnabled = false
+            aerodynamicEnchancementSwitch.isEnabled = false
+            cycleCarsButton.isEnabled = false
+            finishButton.isEnabled = false
+            finishAlert(title: "")
+            
+        }
+    }
+    
+    @IBAction func finishButton(_ sender: Any) {
+        engineAndExhaustPackageSwitch.isEnabled = false
+        turboPackageSwitch.isEnabled = false
+        tiresPackageSwitch.isEnabled = false
+        aerodynamicEnchancementSwitch.isEnabled = false
+        cycleCarsButton.isEnabled = false
+        finishButton.isEnabled = false
+        finishAlert(title: "User-initiated finish")
+    }
+}
 
-}
-}

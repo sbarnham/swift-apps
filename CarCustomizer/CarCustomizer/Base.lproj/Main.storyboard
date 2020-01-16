@@ -25,6 +25,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLP-5H-Sdx">
                                 <rect key="frame" x="171" y="187" width="74" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="cycleCarsButton"/>
                                 <state key="normal" title="Cycle Cars"/>
                                 <connections>
                                     <action selector="cycleCars:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aiD-we-0AS"/>
@@ -33,6 +34,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="V59-OK-DMb">
                                 <rect key="frame" x="20" y="244" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="engineAndExhaustSwitch"/>
                                 <connections>
                                     <action selector="engineAndExhaustToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="5Jv-DK-GA4"/>
                                 </connections>
@@ -40,6 +42,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uFK-br-s8X">
                                 <rect key="frame" x="20" y="283" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tiresSwitch"/>
                                 <connections>
                                     <action selector="tiresToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="dQE-PC-mUf"/>
                                 </connections>
@@ -61,6 +64,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remaining Funds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aar-fC-xvv">
                                 <rect key="frame" x="20" y="441" width="257" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="remainingFundsLabel"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -82,6 +86,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sq4-Cz-agK">
                                 <rect key="frame" x="20" y="323" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="turboSwitch"/>
                                 <connections>
                                     <action selector="turboToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="StF-8f-Tsw"/>
                                 </connections>
@@ -89,10 +94,26 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Qhe-Xi-iMe">
                                 <rect key="frame" x="20" y="361" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="aeSwitch"/>
                                 <connections>
                                     <action selector="aerodynamicEnchancementToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="cyF-8T-Nw2"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time Remaining" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ieq-eD-EjB">
+                                <rect key="frame" x="271" y="44" width="123" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZx-hH-wKV">
+                                <rect key="frame" x="331" y="441" width="65" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Finished?"/>
+                                <connections>
+                                    <action selector="finishButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ify-PW-C2A"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -100,8 +121,11 @@
                     <connections>
                         <outlet property="aerodynamicEnchancementSwitch" destination="Qhe-Xi-iMe" id="vGA-0V-5Ur"/>
                         <outlet property="carStatistics" destination="5Oj-Xw-yG7" id="IKA-pZ-YF9"/>
+                        <outlet property="cycleCarsButton" destination="WLP-5H-Sdx" id="lc5-bk-DPZ"/>
                         <outlet property="engineAndExhaustPackageSwitch" destination="V59-OK-DMb" id="0d5-pV-A7t"/>
+                        <outlet property="finishButton" destination="tZx-hH-wKV" id="lNN-1b-Ojw"/>
                         <outlet property="remainingFundsDisplay" destination="Aar-fC-xvv" id="59I-L8-NFB"/>
+                        <outlet property="timeRemainingDisplay" destination="Ieq-eD-EjB" id="ANf-AX-vUA"/>
                         <outlet property="tiresPackageSwitch" destination="uFK-br-s8X" id="sah-8y-JjN"/>
                         <outlet property="turboPackageSwitch" destination="sq4-Cz-agK" id="0Gn-qt-fgn"/>
                     </connections>
