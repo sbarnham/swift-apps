@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     var timeRemaining = 30 {
         didSet {
             timeRemainingDisplay.text = "\(timeRemaining)"
-            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(countdown), userInfo: nil, repeats: true)
+            
         }
     }
     
@@ -163,6 +163,7 @@ class ViewController: UIViewController {
             self.cycleCarsButton.isEnabled = true
             self.finishButton.isEnabled = true
             self.timeRemaining = 30
+            self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.countdown), userInfo: nil, repeats: true)
         }))
         self.present(finish, animated: true)
     }

@@ -23,10 +23,20 @@ class TamagotchiAppUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+    func testStatsAppearWhenAppLoads() {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
+        
+        XCTAssertEqual(app.staticTexts["statsDisplay"].label, """
+            Name - \(name)
+            Age - 0
+            Health - 10
+            Hunger - 0
+            Happiness - 100
+            Discipline - 0
+            Weight - 0
+            """)
 
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.

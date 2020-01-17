@@ -17,6 +17,7 @@ class Tamagotchi {
     var weight: Int = 0
     var pooOnFloor: Int = 0
     var isIll: Bool = false
+    var hunger: Int = 0
     
     let names = ["Jeff", "Bob", "Steve", "Alex", "Albert", "Bloke"]
     
@@ -87,6 +88,7 @@ class Tamagotchi {
             Name - \(name)
             Age - \(age)
             Health - \(health)
+            Hunger - \(hunger)
             Happiness - \(happiness)
             Discipline - \(discipline)
             Weight - \(weight)
