@@ -39,18 +39,16 @@
                                     <action selector="feedSnack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2G9-T1-Xey"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6G-1v-Rdi">
-                                <rect key="frame" x="170" y="551" width="74" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6G-1v-Rdi">
+                                <rect key="frame" x="170" y="533" width="74" height="83"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="59"/>
                                 <state key="normal" title="💩"/>
                                 <connections>
                                     <action selector="pooButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wbr-jb-EKW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tj0-qA-bWR">
-                                <rect key="frame" x="34" y="114" width="54" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tj0-qA-bWR">
+                                <rect key="frame" x="34" y="114" width="40" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="🤒"/>
                             </button>
@@ -62,19 +60,49 @@
                                     <action selector="giveMedicine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2JF-mJ-x7Y"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="User Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14L-S3-ynE">
+                                <rect key="frame" x="20" y="472.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgJ-7b-F4e">
+                                <rect key="frame" x="20" y="368" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play a game"/>
+                                <connections>
+                                    <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="502-fp-ld1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LlP-7S-XZZ">
+                                <rect key="frame" x="32" y="394" width="67" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Discipline"/>
+                                <connections>
+                                    <action selector="discipline:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bwf-7w-tQW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Tj0-qA-bWR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="1gd-FV-BQo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Q6G-1v-Rdi" secondAttribute="bottom" constant="246" id="LhA-Lh-AYz"/>
+                            <constraint firstItem="Q6G-1v-Rdi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="170" id="j4B-XB-O3y"/>
+                            <constraint firstItem="Q6G-1v-Rdi" firstAttribute="top" secondItem="14L-S3-ynE" secondAttribute="bottom" constant="40" id="mlp-Hg-d75"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q6G-1v-Rdi" secondAttribute="trailing" constant="170" id="zYE-dX-vGp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="illIcon" destination="Tj0-qA-bWR" id="Ex6-am-uzf"/>
                         <outlet property="pooButton" destination="Q6G-1v-Rdi" id="RNW-MQ-EEV"/>
                         <outlet property="tamagotchiStatsDisplay" destination="k4U-re-RpQ" id="Y1f-DW-K1z"/>
+                        <outlet property="userMessage" destination="14L-S3-ynE" id="hZe-Hd-KGN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-717.39130434782612" y="51.5625"/>
+            <point key="canvasLocation" x="-1036.231884057971" y="53.571428571428569"/>
         </scene>
     </scenes>
 </document>

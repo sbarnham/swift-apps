@@ -87,6 +87,7 @@
 				5A509AD523C8BF8100723882 /* CarCustomizerTests */,
 				5A509AE023C8BF8100723882 /* CarCustomizerUITests */,
 				5A509ABD23C8BF7F00723882 /* Products */,
+				5A509AEF23C8C0FD00723882 /* Car.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,7 +111,6 @@
 				5A509AC823C8BF8100723882 /* Assets.xcassets */,
 				5A509ACA23C8BF8100723882 /* LaunchScreen.storyboard */,
 				5A509ACD23C8BF8100723882 /* Info.plist */,
-				5A509AEF23C8C0FD00723882 /* Car.swift */,
 				5A3F6A0C23CA0C7100EAFB2C /* StarterCars.swift */,
 			);
 			path = CarCustomizer;
