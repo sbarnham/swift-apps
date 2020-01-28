@@ -70,7 +70,9 @@ class ViewController: UIViewController {
             if randomValue < pet?.hunger ?? 0{
                 pet?.health -= 1
             }
-            pet?.weight -= 1
+            if pet!.weight > 0 {
+                pet?.weight -= 1
+            }
             userMessage.text = "Your tamagotchi is starving!"
         }
         if pet!.pooOnFloor > 0 {
@@ -102,9 +104,9 @@ class ViewController: UIViewController {
         }
         if pet!.weight > 30 {
             if randomValue > 25 {
-                pet?.happiness -= 10
+                pet?.happiness -= 5
+                userMessage.text = "Your tamagotchi is obese!"
             }
-            userMessage.text = "Your tamagotchi is getting fat!"
         }
         die()
         update()
@@ -139,6 +141,7 @@ class ViewController: UIViewController {
             pet?.happiness += 10
             pet?.discipline -= 25
         }
+        pet?.weight -= 10
         userMessage.text = "Your tamagotchi played a game!"
     }
     
@@ -146,13 +149,15 @@ class ViewController: UIViewController {
     @IBAction func discipline(_ sender: Any) {
         let randomValue = Int.random(in: 0...100)
         if randomValue > 70 {
-            pet?.health -= 5
+            pet?.health -= 3
             userMessage.text = "Be careful! You hit your tamagotchi too hard"
         }
         if pet!.discipline == 100 {
-            pet?.happiness -= 50
+            pet?.happiness -= 25
         }
-        pet?.discipline += 20
+        if pet!.discipline < 80 {
+            pet?.discipline += 20
+        }
         userMessage.text = "Your tamagotchi started behaving better..."
     }
     
@@ -183,6 +188,7 @@ class ViewController: UIViewController {
     }
     
     func deathAlert(title: String) {
+        tamagotchiStatsDisplay.text = "\(pet?.name ?? "") is dead!"
         let death = UIAlertController(title: title, message: "Time elapsed (seconds): \(count)", preferredStyle: .alert)
         death.addAction(UIAlertAction(title: "New Tamagotchi", style: .cancel, handler: {(action:UIAlertAction!) in
             self.pet = Tamagotchi.init()
