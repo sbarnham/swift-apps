@@ -39,8 +39,17 @@ class ViewController: UITableViewController {
             as? DivisionAbsenceViewController else {
                 fatalError("Failed to load Division Absence View Controller from Storyboard")
         }
+        let selectedDivision = divisions[indexPath.row]
         
-        vc.division = divisions[indexPath.row]
+        if let existingAbsence = selectedDivision.getAbsence(for: currentDate) {
+            vc.absence = existingAbsence
+        } else {
+            let newAbsence = Absence(date: currentDate)
+            selectedDivision.absences.append(newAbsence)
+            vc.absence = newAbsence
+        }
+        
+        vc.division = selectedDivision
         
         navigationController?.pushViewController(vc, animated: true)
     }
