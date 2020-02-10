@@ -141,7 +141,11 @@ class ViewController: UIViewController {
             pet?.happiness += 10
             pet?.discipline -= 25
         }
-        pet?.weight -= 10
+        if pet!.weight >= 10 {
+            pet?.weight -= 10
+        } else {
+            pet?.weight -= pet!.weight
+        }
         userMessage.text = "Your tamagotchi played a game!"
     }
     
