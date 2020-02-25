@@ -46,12 +46,46 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
         return true
     }
     
+    
+    @IBAction func subjectTextFieldSelected(_ sender: Any) {
+        subjectTextField.backgroundColor = UIColor.white
+    }
+    
+    
+    @IBAction func AoITextFieldSelected(_ sender: Any) {
+        AoITextField.backgroundColor = UIColor.white
+    }
+    
+    
+    
     @IBAction func generateButton(_ sender: Any) {
+        if subjectTextField.text == "" {
+            subjectTextField.backgroundColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.3)
+        }
+        if AoITextField.text == "" {
+            AoITextField.backgroundColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.3)
+        }
         let subject = subjectTextField.text!
         let areasOfImprovement = AoITextField.text!
         let comment = CommentFactory.createComment(subject: subject, enjoyment: enjoymentData[enjoymentPicker.selectedRow(inComponent: 0)], areasToImprove: areasOfImprovement, attainment: attainmentData[attainmentPicker.selectedRow(inComponent: 0)])
         generatedComment.text = comment
+        if comment.count > 300 {
+            commentTooLongAlert()
+        }
+        
     }
+    
+    func commentTooLongAlert() {
+        let alert = UIAlertController(title: "Length limit exceeded", message: "This generated comment has reached over 300 characters. This may be too long for your comment card. It is recommended that you shorten your responses in the text fields.", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Proceed", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
+    @IBAction func copyButton(_ sender: Any) {
+        let pasteboard = UIPasteboard.general
+        pasteboard.string = generatedComment.text
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

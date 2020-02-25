@@ -10,7 +10,9 @@ import Foundation
 
 class CommentFactory {
     static func createComment(subject: String, enjoyment: String, areasToImprove: String, attainment: String) -> String {
-        let comment = "I am \(enjoyment) \(subject) and I feel that I am working with good effort at a \(attainment) standard. In terms of areas to improve for next time, I believe that I could improve at \(areasToImprove)."
+        var neatEnjoyment = enjoyment.lowercased()
+        neatEnjoyment.removeLast(3)
+        let comment = "I am \(neatEnjoyment) \(subject) and I feel that I am working at a \(attainment.lowercased()) standard. In terms of areas to improve for the next term, I believe that I could improve in the following areas: \(areasToImprove)."
         return comment
     }
     
