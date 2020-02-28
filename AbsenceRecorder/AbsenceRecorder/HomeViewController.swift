@@ -33,9 +33,8 @@ class HomeViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        
         let selectedDivision = divisions[indexPath.row]
-        var absence = Absence(date: currentDate)
+        var absence = Absence(date: currentDate, present: selectedDivision.students)
         if let existingAbsence = selectedDivision.getAbsence(for: currentDate) {
             absence = existingAbsence
         } else {
@@ -51,6 +50,36 @@ class HomeViewController: UITableViewController {
 
         
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let allPresent = UIContextualAction(style: .normal, title: "All Present") { action, view, completionHandler in
+            let division = self.divisions[indexPath.row]
+            if let absence = division.getAbsence(for: self.currentDate) {
+                absence.present = division.students
+            } else {
+                let absence = Absence(date: self.currentDate, present: division.students)
+                division.absences.append(absence)
+            }
+            tableView.reloadData()
+            completionHandler(true)
+        }
+        allPresent.backgroundColor = UIColor.green
+        return UISwipeActionsConfiguration(actions: [allPresent])
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let clear  = UIContextualAction(style: .normal, title: "Clear") { action, view, completionHandler in
+            let division = self.divisions[indexPath.row]
+            let index = division.absences.firstIndex(where: { $0.takenOn == self.currentDate })
+            division.absences[index ?? 0] = Absence(date: self.currentDate, present: division.students)
+            let cell = tableView.cellForRow(at: indexPath)
+            cell!.accessoryType = .none
+            completionHandler(true)
+        }
+        clear.backgroundColor = UIColor.red
+        return UISwipeActionsConfiguration(actions: [clear])
     }
     
     

@@ -1,15 +1,15 @@
 //
-//  AbsenceRecorderTests.swift
-//  AbsenceRecorderTests
+//  MusicByLocationTests.swift
+//  MusicByLocationTests
 //
-//  Created by Barnham, Samuel (ABH) on 29/01/2020.
+//  Created by Barnham, Samuel (ABH) on 26/02/2020.
 //  Copyright © 2020 Barnham, Samuel (ABH). All rights reserved.
 //
 
 import XCTest
-@testable import AbsenceRecorder
+@testable import MusicByLocation
 
-class AbsenceRecorderTests: XCTestCase {
+class MusicByLocationTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -20,8 +20,8 @@ class AbsenceRecorderTests: XCTestCase {
     }
 
     func testExample() {
-        //let division = Division()
-        
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
     func testPerformanceExample() {
