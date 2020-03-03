@@ -8,20 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate {
     
-    let enjoymentData = ["Really Enjoying...", "Enjoying...","Liking...","Not Enjoying..."]
+    let enjoymentData = ["Really Enjoying...", "Enjoying...","Liking...", "Not Enjoying..."]
     let attainmentData = ["Excellent","Very Good","Good","Satisfactory","Poor", "Inadequate"]
 
     
-    @IBOutlet var generatedComment: UILabel!
+    @IBOutlet var generatedComment: UITextView!
     @IBOutlet var subjectInput: UITextField!
     @IBOutlet var areasOfImprovementInput: UITextField!
     @IBOutlet var enjoymentPicker: UIPickerView!
     @IBOutlet var attainmentPicker: UIPickerView!
     @IBOutlet var effortSlider: UISlider!
     @IBOutlet var talentsInput: UITextField!
-    
+    @IBOutlet var stopEditingButton: UIButton!
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -43,10 +43,35 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
         }
     }
     
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        stopEditingButton.isHidden = false
+        subjectInput.isEnabled = false
+        areasOfImprovementInput.isEnabled = false
+        talentsInput.isEnabled = false
+        
+    }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-       textField.resignFirstResponder()
+    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+        textView.resignFirstResponder()
+        stopEditingButton.isHidden = true
+        subjectInput.isEnabled = true
+        areasOfImprovementInput.isEnabled = true
+        talentsInput.isEnabled = true
+        if generatedComment.text.count > 400 {
+            commentTooLongAlert()
+        }
         return true
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    
+    
+    @IBAction func talentsTextFieldSelected(_ sender: Any) {
+        talentsInput.backgroundColor = UIColor.white
     }
     
     
@@ -62,6 +87,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
     
     
     @IBAction func generateButton(_ sender: Any) {
+        generatedComment.isEditable = true
         if subjectInput.text == "" {
             subjectInput.backgroundColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.3)
         }
@@ -80,6 +106,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
             commentTooLongAlert()
         }
         
+    }
+    
+    
+    @IBAction func stopEditingButtonPressed(_ sender: Any) {
+        _ = textViewShouldEndEditing(generatedComment)
     }
     
     func effortDecoder() -> String {
@@ -111,18 +142,25 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
     }
     
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        generatedComment.isEditable = false
+        stopEditingButton.isHidden = true
+        generatedComment.delegate = self
         enjoymentPicker.delegate = self
         enjoymentPicker.dataSource = self
         attainmentPicker.delegate = self
-        attainmentPicker.delegate = self
+        attainmentPicker.dataSource = self
         areasOfImprovementInput.delegate = self
         subjectInput.delegate = self
         subjectInput.placeholder = "Essential"
         areasOfImprovementInput.placeholder = "Essential"
         talentsInput.placeholder = "Recommended"
+        talentsInput.delegate = self
     }
     
     
