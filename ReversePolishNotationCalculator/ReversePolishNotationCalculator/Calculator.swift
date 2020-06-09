@@ -12,8 +12,6 @@ class Calculator {
     var expressionStack: [Int] = []
     var expression = ""
     
-    
-    
     var parts = [String]()
     
     
