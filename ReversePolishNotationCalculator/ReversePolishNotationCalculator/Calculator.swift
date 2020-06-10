@@ -10,14 +10,13 @@ import Foundation
 
 class Calculator {
     var expressionStack: [Int] = []
-    var expression = ""
+    var expression: [String] = []
     
     var parts = [String]()
     
     
     func evaluate() -> Int? {
-        parts = expression.components(separatedBy: " ")
-        for part in parts {
+        for part in expression {
             if isNumber(part: part) {
                 expressionStack.append(Int(part)!) //force unwrap justified by passing guard statement in isNumber()
             } else if isValidOperator(part: part) {
