@@ -16,6 +16,7 @@ class Calculator {
     
     
     func evaluate() -> Int? {
+        expressionStack = []
         for part in expression {
             if isNumber(part: part) {
                 expressionStack.append(Int(part)!) //force unwrap justified by passing guard statement in isNumber()

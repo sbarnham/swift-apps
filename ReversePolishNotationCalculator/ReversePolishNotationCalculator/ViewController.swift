@@ -128,6 +128,9 @@ class ViewController: UIViewController {
     @IBAction func flipSign(_ sender: Any) {
         var array = Array(currentOperand)
         let index = currentOperand.count
+        if array.count == 0 {
+            return
+        }
         if array[0] == "-" {
             array.remove(at: 0)
             currentOperand = String(array)
@@ -183,6 +186,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func evaluationButton(_ sender: Any) {
+        if currentOperand.count != 0{
+            calculator.expression.append(currentOperand)
+        }
         guard let result = calculator.evaluate() else {
             clear()
             errorAlert()

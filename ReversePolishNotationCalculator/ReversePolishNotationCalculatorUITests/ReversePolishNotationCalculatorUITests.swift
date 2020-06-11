@@ -73,7 +73,17 @@ class ReversePolishNotationCalculatorUITests: XCTestCase {
         app.buttons["/"].tap()
         app.buttons["eval"].tap()
         XCTAssertEqual(app.staticTexts["display"].label, "")
-        
+    }
+    
+    func testOperandCannotExceed3Digits() {
+        let app = XCUIApplication()
+        app.launch()
+        app.buttons["8"].tap()
+        app.buttons["8"].tap()
+        app.buttons["8"].tap()
+        app.buttons["8"].tap()
+        app.buttons["8"].tap()
+        XCTAssertEqual(app.staticTexts["display"].label, "888")
     }
 }
 

@@ -15,10 +15,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbi-UH-whh">
-                                <rect key="frame" x="46" y="85" width="322" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbi-UH-whh">
+                                <rect key="frame" x="46" y="140" width="322" height="80"/>
                                 <accessibility key="accessibilityConfiguration" identifier="display"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="qM4-nz-LVZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -28,10 +30,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdq-XE-v0e">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdq-XE-v0e">
                                 <rect key="frame" x="46" y="248" width="101" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="7"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="Rzg-Qt-cfl"/>
+                                    <constraint firstAttribute="height" constant="92" id="T2g-m6-581"/>
+                                </constraints>
                                 <state key="normal" title="7">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -44,10 +49,13 @@
                                     <action selector="enterSeven:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P3B-ZT-1sm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rl0-LF-HKk">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rl0-LF-HKk">
                                 <rect key="frame" x="46" y="349" width="101" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="3sz-4j-hj7"/>
+                                    <constraint firstAttribute="width" constant="101" id="Fc4-Vi-rZl"/>
+                                </constraints>
                                 <state key="normal" title="4">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -60,10 +68,13 @@
                                     <action selector="enterFour:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lse-xn-aYC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QlG-ep-hJC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QlG-ep-hJC">
                                 <rect key="frame" x="46" y="450" width="101" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="dOQ-CR-PDk"/>
+                                    <constraint firstAttribute="height" constant="92" id="gW2-6g-Jnn"/>
+                                </constraints>
                                 <state key="normal" title="1">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -76,10 +87,13 @@
                                     <action selector="enterOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zdd-P2-2rO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzN-ZF-iK1">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzN-ZF-iK1">
                                 <rect key="frame" x="46" y="549" width="101" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="eval"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="hpG-yr-rXb"/>
+                                    <constraint firstAttribute="width" constant="101" id="wym-zA-hS4"/>
+                                </constraints>
                                 <state key="normal" title="EVAL">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -92,10 +106,15 @@
                                     <action selector="evaluationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Afd-PX-eoJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzd-hX-Ofk">
-                                <rect key="frame" x="46" y="773" width="65" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzd-hX-Ofk">
+                                <rect key="frame" x="56" y="741" width="45" height="30"/>
                                 <accessibility key="accessibilityConfiguration" identifier="+"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="JzG-Y9-WcP"/>
+                                    <constraint firstAttribute="width" constant="45" id="btW-Xe-cBl"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="w3x-Yk-vFU"/>
+                                    <constraint firstAttribute="height" constant="45" id="yId-u7-3XI"/>
+                                </constraints>
                                 <state key="normal" title="+">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -108,10 +127,15 @@
                                     <action selector="enterPlus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ry6-wg-HB9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kO-vO-Rfr">
-                                <rect key="frame" x="129" y="773" width="65" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kO-vO-Rfr">
+                                <rect key="frame" x="139" y="741" width="45" height="30"/>
                                 <accessibility key="accessibilityConfiguration" identifier="-"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="0AY-Zf-P0P"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="3qf-7d-aP4"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="DsH-Vn-kFv"/>
+                                    <constraint firstAttribute="width" constant="45" id="Vep-yK-BEl"/>
+                                </constraints>
                                 <state key="normal" title="-">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -124,10 +148,15 @@
                                     <action selector="enterMinus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lh1-0L-4dz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThQ-YI-EXr">
-                                <rect key="frame" x="215" y="773" width="65" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThQ-YI-EXr">
+                                <rect key="frame" x="225" y="741" width="45" height="30"/>
                                 <accessibility key="accessibilityConfiguration" identifier="*"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="8QN-j6-acw"/>
+                                    <constraint firstAttribute="width" constant="45" id="8iv-fJ-ZRW"/>
+                                    <constraint firstAttribute="height" constant="45" id="YzQ-jC-evg"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="cHw-de-6uK"/>
+                                </constraints>
                                 <state key="normal" title="*">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -140,26 +169,13 @@
                                     <action selector="enterMultiply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x2u-6h-bJ2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vv-MO-YbB">
-                                <rect key="frame" x="46" y="677" width="157" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" identifier="enter"/>
-                                <state key="normal" title="ENTER">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <real key="value" value="0.80000000000000004"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="confirmOperand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0b4-XU-eXM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08S-J8-DOc">
-                                <rect key="frame" x="219" y="677" width="149" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08S-J8-DOc">
+                                <rect key="frame" x="219" y="654" width="149" height="52"/>
                                 <accessibility key="accessibilityConfiguration" identifier="swapsign"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="149" id="IQx-Qm-eO4"/>
+                                    <constraint firstAttribute="height" constant="52" id="RNW-kK-Jyh"/>
+                                </constraints>
                                 <state key="normal" title="+/-">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -172,10 +188,13 @@
                                     <action selector="flipSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jXH-TT-4pR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ta7-qO-eZt">
-                                <rect key="frame" x="157" y="549" width="101" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ta7-qO-eZt">
+                                <rect key="frame" x="156.5" y="549" width="101" height="92"/>
                                 <accessibility key="accessibilityConfiguration" identifier="0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="EeD-QG-bus"/>
+                                    <constraint firstAttribute="width" constant="101" id="OqP-gX-Amp"/>
+                                </constraints>
                                 <state key="normal" title="0">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -188,10 +207,13 @@
                                     <action selector="enterZero:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8mM-3G-SUF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2H9-La-VsD">
-                                <rect key="frame" x="157" y="348" width="101" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2H9-La-VsD">
+                                <rect key="frame" x="156.5" y="348" width="101" height="92"/>
                                 <accessibility key="accessibilityConfiguration" identifier="5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="RCj-lo-Q36"/>
+                                    <constraint firstAttribute="width" constant="101" id="SyW-wa-Eze"/>
+                                </constraints>
                                 <state key="normal" title="5">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -204,10 +226,13 @@
                                     <action selector="enterFive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dw7-eu-jVR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJq-st-HKN">
-                                <rect key="frame" x="157" y="449" width="101" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJq-st-HKN">
+                                <rect key="frame" x="156.5" y="449" width="101" height="92"/>
                                 <accessibility key="accessibilityConfiguration" identifier="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="EJH-0H-HEH"/>
+                                    <constraint firstAttribute="height" constant="92" id="RTm-VV-NMV"/>
+                                </constraints>
                                 <state key="normal" title="2">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -220,10 +245,13 @@
                                     <action selector="enterTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QbO-3z-Wy1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3On-S4-Dy8">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3On-S4-Dy8">
                                 <rect key="frame" x="267" y="348" width="101" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="6"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="XJ4-Hm-gXU"/>
+                                    <constraint firstAttribute="height" constant="92" id="cQv-vB-h9R"/>
+                                </constraints>
                                 <state key="normal" title="6">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -236,10 +264,13 @@
                                     <action selector="enterSix:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wct-1f-WzS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blo-9I-1YX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blo-9I-1YX">
                                 <rect key="frame" x="267" y="449" width="101" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="Gjg-Jc-giD"/>
+                                    <constraint firstAttribute="height" constant="92" id="uxV-4O-Ex5"/>
+                                </constraints>
                                 <state key="normal" title="3">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -252,10 +283,13 @@
                                     <action selector="enterThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Vw-Dg-OSQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtC-c4-ici">
-                                <rect key="frame" x="157" y="248" width="101" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtC-c4-ici">
+                                <rect key="frame" x="156.5" y="248" width="101" height="92"/>
                                 <accessibility key="accessibilityConfiguration" identifier="8"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="2LU-Hz-Y4R"/>
+                                    <constraint firstAttribute="width" constant="101" id="GrE-7e-Los"/>
+                                </constraints>
                                 <state key="normal" title="8">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -268,10 +302,13 @@
                                     <action selector="enterEight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rk7-qW-faB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yab-jV-b0N">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yab-jV-b0N">
                                 <rect key="frame" x="267" y="248" width="101" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="9"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="9nt-Nq-alB"/>
+                                    <constraint firstAttribute="height" constant="92" id="ogy-xv-mLu"/>
+                                </constraints>
                                 <state key="normal" title="9">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -284,10 +321,13 @@
                                     <action selector="enterNine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L4v-vI-ATT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l47-Yu-XZ6">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l47-Yu-XZ6">
                                 <rect key="frame" x="267" y="549" width="101" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="clear"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="AAi-4N-oZv"/>
+                                    <constraint firstAttribute="height" constant="92" id="q42-Ze-cNK"/>
+                                </constraints>
                                 <state key="normal" title="CLR">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -300,10 +340,15 @@
                                     <action selector="clearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a7u-xx-JVT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzO-zQ-bh5">
-                                <rect key="frame" x="303" y="773" width="65" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzO-zQ-bh5">
+                                <rect key="frame" x="313" y="741" width="45" height="30"/>
                                 <accessibility key="accessibilityConfiguration" identifier="/"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="IRT-jh-lL7"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="oLe-4p-oOI"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="yEE-dU-cTC"/>
+                                    <constraint firstAttribute="width" constant="45" id="zJw-gB-Xab"/>
+                                </constraints>
                                 <state key="normal" title="/">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -316,8 +361,76 @@
                                     <action selector="enterDivide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Egg-WU-PTj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vv-MO-YbB">
+                                <rect key="frame" x="52" y="654" width="157" height="52"/>
+                                <accessibility key="accessibilityConfiguration" identifier="enter"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="157" id="8zv-0S-Hxo"/>
+                                    <constraint firstAttribute="height" constant="52" id="s1U-yZ-dV0"/>
+                                </constraints>
+                                <state key="normal" title="ENTER">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="confirmOperand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0b4-XU-eXM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Xdq-XE-v0e" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-154" id="3LH-QO-QKm"/>
+                            <constraint firstItem="rtC-c4-ici" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Rd-HR-4yh"/>
+                            <constraint firstItem="3On-S4-Dy8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-54" id="7Cl-zd-Pxa"/>
+                            <constraint firstItem="l47-Yu-XZ6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="147" id="7Gi-5j-EHa"/>
+                            <constraint firstItem="l47-Yu-XZ6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="110.5" id="7RN-so-j6C"/>
+                            <constraint firstItem="4vv-MO-YbB" firstAttribute="top" relation="lessThanOrEqual" secondItem="vzN-ZF-iK1" secondAttribute="bottom" constant="36" id="7sr-y5-cFS"/>
+                            <constraint firstItem="fzO-zQ-bh5" firstAttribute="width" secondItem="bzd-hX-Ofk" secondAttribute="width" id="7th-TM-EFO"/>
+                            <constraint firstItem="rl0-LF-HKk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-53" id="8zR-wl-8Qe"/>
+                            <constraint firstItem="0kO-vO-Rfr" firstAttribute="top" secondItem="bzd-hX-Ofk" secondAttribute="top" id="BEj-cZ-uYZ"/>
+                            <constraint firstItem="vzN-ZF-iK1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-110.5" id="Brp-di-0Tl"/>
+                            <constraint firstItem="ThQ-YI-EXr" firstAttribute="height" secondItem="bzd-hX-Ofk" secondAttribute="height" id="CCp-Cc-Iug"/>
+                            <constraint firstItem="rtC-c4-ici" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-154" id="DXq-nO-E5H"/>
+                            <constraint firstItem="Lbi-UH-whh" firstAttribute="leading" secondItem="Xdq-XE-v0e" secondAttribute="leading" id="FEt-Mx-MlT"/>
+                            <constraint firstItem="ThQ-YI-EXr" firstAttribute="top" secondItem="bzd-hX-Ofk" secondAttribute="top" id="GZU-O1-SDZ"/>
+                            <constraint firstItem="Lbi-UH-whh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-268" id="Ht4-dE-W5o"/>
+                            <constraint firstItem="Xdq-XE-v0e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-110.5" id="IAS-Xv-RaO"/>
+                            <constraint firstItem="4vv-MO-YbB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="232" id="Ixz-GS-BWR"/>
+                            <constraint firstItem="vzN-ZF-iK1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="147" id="JCY-P3-fk3"/>
+                            <constraint firstItem="0kO-vO-Rfr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-45.5" id="N05-pP-Iuh"/>
+                            <constraint firstItem="2H9-La-VsD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OGz-Z5-FSr"/>
+                            <constraint firstItem="ta7-qO-eZt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ONG-cz-kY6"/>
+                            <constraint firstItem="0kO-vO-Rfr" firstAttribute="width" secondItem="bzd-hX-Ofk" secondAttribute="width" id="P7j-sN-Uk6"/>
+                            <constraint firstItem="fzO-zQ-bh5" firstAttribute="top" secondItem="bzd-hX-Ofk" secondAttribute="top" id="Pyi-7e-6LW"/>
+                            <constraint firstItem="Lbi-UH-whh" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="Q9J-83-cuH"/>
+                            <constraint firstItem="eJq-st-HKN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="47" id="RNq-iH-iNJ"/>
+                            <constraint firstItem="QlG-ep-hJC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="48" id="SPG-4g-xuZ"/>
+                            <constraint firstItem="QlG-ep-hJC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-110.5" id="Te6-tN-BRu"/>
+                            <constraint firstItem="4vv-MO-YbB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-76.5" id="Vqd-7L-Mla"/>
+                            <constraint firstItem="eJq-st-HKN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y7d-ba-uFO"/>
+                            <constraint firstItem="fzO-zQ-bh5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="128.5" id="ZfE-l6-VZW"/>
+                            <constraint firstItem="08S-J8-DOc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="232" id="Zx6-Mw-pG6"/>
+                            <constraint firstItem="yab-jV-b0N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="110.5" id="bFh-M9-YOg"/>
+                            <constraint firstItem="rl0-LF-HKk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-110.5" id="c3h-7L-V90"/>
+                            <constraint firstItem="bzd-hX-Ofk" firstAttribute="top" relation="lessThanOrEqual" secondItem="4vv-MO-YbB" secondAttribute="bottom" constant="49" id="dBx-Dw-mad"/>
+                            <constraint firstItem="yab-jV-b0N" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-154" id="emz-Pc-CZh"/>
+                            <constraint firstItem="fzO-zQ-bh5" firstAttribute="height" secondItem="bzd-hX-Ofk" secondAttribute="height" id="gPA-2w-OLb"/>
+                            <constraint firstItem="3On-S4-Dy8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="110.5" id="hm8-rC-SHS"/>
+                            <constraint firstItem="bzd-hX-Ofk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-128.5" id="jOh-Z0-UD2"/>
+                            <constraint firstItem="0kO-vO-Rfr" firstAttribute="height" secondItem="bzd-hX-Ofk" secondAttribute="height" id="jVw-ib-Dpt"/>
+                            <constraint firstItem="08S-J8-DOc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="86.5" id="p7r-8Y-cdQ"/>
+                            <constraint firstItem="Lbi-UH-whh" firstAttribute="trailing" secondItem="yab-jV-b0N" secondAttribute="trailing" id="q7k-AH-cCR"/>
+                            <constraint firstItem="ta7-qO-eZt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="147" id="sZJ-Yj-Xhg"/>
+                            <constraint firstItem="Blo-9I-1YX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="47" id="u0I-UC-aYS"/>
+                            <constraint firstItem="ThQ-YI-EXr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="40.5" id="ulA-ci-Ubu"/>
+                            <constraint firstItem="Blo-9I-1YX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="110.5" id="vbI-i7-xNC"/>
+                            <constraint firstItem="ThQ-YI-EXr" firstAttribute="width" secondItem="bzd-hX-Ofk" secondAttribute="width" id="xCb-lY-oN4"/>
+                            <constraint firstItem="2H9-La-VsD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-54" id="ybu-0Y-o6A"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
