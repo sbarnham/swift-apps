@@ -111,7 +111,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func enterZero(_ sender: Any) {
-        if checkIfExceeded3Digits() || currentOperand.count == 0 {
+        if checkIfExceeded3Digits() || (currentOperand.count == 1 && currentOperand == "0") {
             return
         }
         currentOperand.append("0")
@@ -127,12 +127,16 @@ class ViewController: UIViewController {
     
     @IBAction func flipSign(_ sender: Any) {
         var array = Array(currentOperand)
+        let index = currentOperand.count
         if array[0] == "-" {
             array.remove(at: 0)
+            currentOperand = String(array)
+            calculatorDisplay.text?.remove(at: calculatorDisplay.text!.index( calculatorDisplay.text!.endIndex, offsetBy: -index))
             return
         }
         array.insert("-", at: 0)
         currentOperand = String(array)
+        calculatorDisplay.text?.insert("-", at: calculatorDisplay.text!.index(calculatorDisplay.text!.endIndex, offsetBy: -index))
     }
     
     fileprivate func operatorEnter(op: String) {
@@ -168,9 +172,16 @@ class ViewController: UIViewController {
         calculatorDisplay.text!.removeAll()
     }
     
+    func errorAlert() {
+        let alert = UIAlertController(title: "Invalid expression", message: "Please enter the expression again", preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
+        }
+    
     @IBAction func evaluationButton(_ sender: Any) {
         guard let result = calculator.evaluate() else {
-            calculatorDisplay.text! = "Invalid expression"
+            calculatorDisplay.text! = ""
+            errorAlert()
             return
         }
         calculatorDisplay.text! = String(result)

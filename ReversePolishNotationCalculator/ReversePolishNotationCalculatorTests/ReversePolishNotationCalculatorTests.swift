@@ -11,24 +11,54 @@ import XCTest
 
 class ReversePolishNotationCalculatorTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testCheckValidTwoDigitExpressionReturnsCorrectResultForMultiplication() {
+        let calculator = Calculator()
+        calculator.expression.append("20")
+        calculator.expression.append("25")
+        calculator.expression.append("*")
+        let result = calculator.evaluate()
+        XCTAssertEqual(result!, 500)
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testCheckValidTwoDigitExpressionReturnsCorrectResultForSubtraction() {
+        let calculator = Calculator()
+        calculator.expression.append("20")
+        calculator.expression.append("25")
+        calculator.expression.append("-")
+        let result = calculator.evaluate()
+        XCTAssertEqual(result!, -5)
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testCheckValidTwoDigitExpressionReturnsCorrectResultForAddition() {
+        let calculator = Calculator()
+        calculator.expression.append("20")
+        calculator.expression.append("25")
+        calculator.expression.append("+")
+        let result = calculator.evaluate()
+        XCTAssertEqual(result!, 45)
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testCheckValidTwoDigitExpressionReturnsCorrectResultForDivision() {
+        let calculator = Calculator()
+        calculator.expression.append("20")
+        calculator.expression.append("25")
+        calculator.expression.append("/")
+        let result = calculator.evaluate()
+        XCTAssertEqual(result!, 0)
+    }
+    func testCheckInvalidExpressionReturnsNil() {
+        let calculator = Calculator()
+        calculator.expression.append("r73")
+        calculator.expression.append("y73")
+        calculator.expression.append("*")
+        let result = calculator.evaluate()
+        XCTAssertEqual(result, nil)
+    }
+    
+    func testCheckMissingOperandReturnsNil() {
+        let calculator = Calculator()
+        calculator.expression.append("73")
+        calculator.expression.append("*")
+        let result = calculator.evaluate()
+        XCTAssertEqual(result, nil)
     }
 
 }

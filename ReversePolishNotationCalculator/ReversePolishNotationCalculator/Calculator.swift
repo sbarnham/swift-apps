@@ -20,8 +20,8 @@ class Calculator {
             if isNumber(part: part) {
                 expressionStack.append(Int(part)!) //force unwrap justified by passing guard statement in isNumber()
             } else if isValidOperator(part: part) {
-                guard let operand1 = expressionStack.popLast() else { return nil }
                 guard let operand2 = expressionStack.popLast() else { return nil }
+                guard let operand1 = expressionStack.popLast() else { return nil }
                 if part == "+" {
                     expressionStack.append(operand1 + operand2)
                 } else if part == "*" {

@@ -40,7 +40,7 @@ class HomeViewController: UITableViewController {
         } else {
             selectedDivision.absences.append(absence)
         }
-        
+    
         
         guard let vc = storyboard?.instantiateViewController(identifier: "DivisionAbsenceViewController", creator: { coder in
             return DivisionAbsenceViewController(coder: coder, division: selectedDivision, absence: absence)
@@ -89,7 +89,51 @@ class HomeViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    func convertDivisionsToJson() -> String? {
+        let encoder = JSONEncoder()
+        guard let encoded = try? encoder.encode(divisions) else {
+            print("Unable to encode divisions into JSON")
+            return nil
+        }
+        guard let json = String(data: encoded, encoding: .utf8) else {
+            print("Unable to turn encoded divisions into a string")
+            return nil
+        }
+        
+        return json
+    }
     
+    func convertJsonToDivisions(json: Data) -> [Division]? {
+        let decoder = JSONDecoder()
+        
+        guard let decoded = try? decoder.decode([Division].self, from: json) else {
+            return nil
+        }
+        return decoded
+    }
+    
+    func saveDataToFile() {
+        guard let divisionsJson = convertDivisionsToJson() else {
+            return
+        }
+        let filePath = UserDocumentManager.getDocumentsDirectory().appendingPathComponent("divisions.txt")
+        
+        do {
+            try divisionsJson.write(to: filePath, atomically: true, encoding: String.Encoding.utf8)
+        } catch {
+            print("Unable to save by writing to a file")
+        }
+    }
+    
+    func loadDataFromFile() {
+        let filePath = UserDocumentManager.getDocumentsDirectory().appendingPathComponent("divisions.txt")
+        do {
+            let json = try Data(contentsOf: filePath)
+            divisions = convertJsonToDivisions(json: json) ?? []
+        } catch {
+            print("Failed to read from file")
+        }
+    }
     
     @IBAction func previousDay(_ sender: Any) {
         currentDate = Calendar.current.date(byAdding: .day, value: -1, to: currentDate) ?? Date()
