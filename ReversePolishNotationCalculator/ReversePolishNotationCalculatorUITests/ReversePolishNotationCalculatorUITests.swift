@@ -32,8 +32,48 @@ class ReversePolishNotationCalculatorUITests: XCTestCase {
         app.buttons["3"].tap()
         app.buttons["swapsign"].tap()
         XCTAssertEqual(app.staticTexts["display"].label, "-523")
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    func testClearButtonResetsDisplay() {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        app.launch()
+        app.buttons["1"].tap()
+        app.buttons["4"].tap()
+        app.buttons["6"].tap()
+        app.buttons["clear"].tap()
+        XCTAssertEqual(app.staticTexts["display"].label, "")
+    }
+    
+    func testEvalButtonEvaluatesCurrentExpressionEnteredAndPresentsResult() {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        app.launch()
+        app.buttons["7"].tap()
+        app.buttons["0"].tap()
+        app.buttons["enter"].tap()
+        app.buttons["9"].tap()
+        app.buttons["*"].tap()
+        app.buttons["9"].tap()
+        app.buttons["enter"].tap()
+        app.buttons["9"].tap()
+        app.buttons["+"].tap()
+        app.buttons["-"].tap()
+        app.buttons["eval"].tap()
+        XCTAssertEqual(app.staticTexts["display"].label, "612")
+    }
+    
+    func testInvalidExpressionMakesDisplayIsBlank() {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        app.launch()
+        app.buttons["8"].tap()
+        app.buttons["0"].tap()
+        app.buttons["enter"].tap()
+        app.buttons["/"].tap()
+        app.buttons["eval"].tap()
+        XCTAssertEqual(app.staticTexts["display"].label, "")
+        
     }
 }
+

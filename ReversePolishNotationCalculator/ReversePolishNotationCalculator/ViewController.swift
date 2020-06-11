@@ -167,9 +167,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clearButton(_ sender: Any) {
-        currentOperand.removeAll()
-        calculator.expression.removeAll()
-        calculatorDisplay.text!.removeAll()
+        clear()
     }
     
     func errorAlert() {
@@ -178,9 +176,15 @@ class ViewController: UIViewController {
             self.present(alert, animated: true)
         }
     
+    fileprivate func clear() {
+        currentOperand.removeAll()
+        calculator.expression.removeAll()
+        calculatorDisplay.text!.removeAll()
+    }
+    
     @IBAction func evaluationButton(_ sender: Any) {
         guard let result = calculator.evaluate() else {
-            calculatorDisplay.text! = ""
+            clear()
             errorAlert()
             return
         }
